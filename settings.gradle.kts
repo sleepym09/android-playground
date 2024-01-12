@@ -14,4 +14,11 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "android-playground"
-include(":app")
+
+sequenceOf("app", "dependencies")
+    .flatMap { File(rootDir, it).walk().maxDepth(5) }
+    .filter { it.name == "build.gradle.kts" }
+    .map { it.parent }
+    .map { it.removePrefix(rootDir.path) }
+    .map { it.replace(File.separatorChar, ':') }
+    .forEach { include(it) }

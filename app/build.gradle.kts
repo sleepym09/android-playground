@@ -53,7 +53,7 @@ dependencies {
     val coreVersion = "1.12.0"
     val appcompatVersion = "1.6.1"
     val constraintVersion = "2.1.4"
-    val navigationVersion = "2.7.6"
+    val navigationVersion = "2.7.7"
     val activityVersion = "1.8.2"
     val materialVersion = "1.11.0"
     implementation("androidx.core:core-ktx:${coreVersion}")

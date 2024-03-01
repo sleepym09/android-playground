@@ -29,8 +29,10 @@ class ComposeActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
+        modifier = modifier,
         text = "Hello $name!",
-        modifier = modifier
+        style = PlaygroundTheme.typography.bodyMedium,
+        color = PlaygroundTheme.colors.textPrimary
     )
 }
 

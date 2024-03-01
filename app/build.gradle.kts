@@ -65,12 +65,12 @@ dependencies {
     implementation("com.google.android.material:material:${materialVersion}")
 
     // coroutines
-    val coroutinesVersion = "1.7.3"
+    val coroutinesVersion = "1.8.0"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}")
 
     // compose
-    val composeBomVersion = "2023.10.01"
+    val composeBomVersion = "2024.02.01"
     implementation(platform("androidx.compose:compose-bom:${composeBomVersion}"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")

@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.sleep.android_playground"
-        minSdk = 23
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -53,14 +53,11 @@ dependencies {
     val coreVersion = "1.12.0"
     val appcompatVersion = "1.6.1"
     val constraintVersion = "2.1.4"
-    val navigationVersion = "2.7.7"
     val activityVersion = "1.8.2"
     val materialVersion = "1.11.0"
     implementation("androidx.core:core-ktx:${coreVersion}")
     implementation("androidx.appcompat:appcompat:${appcompatVersion}")
     implementation("androidx.constraintlayout:constraintlayout:${constraintVersion}")
-    implementation("androidx.navigation:navigation-fragment-ktx:${navigationVersion}")
-    implementation("androidx.navigation:navigation-ui-ktx:${navigationVersion}")
     implementation("androidx.activity:activity-compose:${activityVersion}")
     implementation("com.google.android.material:material:${materialVersion}")
 

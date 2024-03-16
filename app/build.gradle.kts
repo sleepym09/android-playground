@@ -21,6 +21,10 @@ android {
     }
 
     buildTypes {
+        debug {
+            isMinifyEnabled = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
@@ -60,7 +64,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:$appcompatVersion")
     implementation("androidx.constraintlayout:constraintlayout:$constraintVersion")
     implementation("androidx.activity:activity-compose:$activityVersion")
-    implementation("androidx.navigation:navigation-compose$navigationVersion")
+    implementation("androidx.navigation:navigation-compose:$navigationVersion")
     implementation("com.google.android.material:material:$materialVersion")
 
     // coroutines
@@ -69,7 +73,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
 
     // compose
-    val composeBomVersion = "2024.02.01"
+    val composeBomVersion = "2024.02.02"
     implementation(platform("androidx.compose:compose-bom:$composeBomVersion"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
@@ -86,7 +90,7 @@ dependencies {
     testImplementation("junit:junit:$junitVersion")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.6.3")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 }

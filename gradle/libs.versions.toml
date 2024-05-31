@@ -1,0 +1,47 @@
+[versions]
+coreVersion = "1.13.1"
+appcompatVersoin = "1.7.0"
+constrantlayoutVersion = "2.1.4"
+coroutinesVersion = "1.8.0"
+composeBomVersion = "2024.05.00"
+lifecycleVersion = "2.8.1"
+activityVersion = "1.9.0"
+navigationVersion = "2.7.7"
+materialVersion = "1.12.0"
+
+junitVersion = "4.13.2"
+junitExtVersion = "1.1.5"
+espressoVersion = "3.5.1"
+composeJunit = "1.6.7"
+
+[libraries]
+androidx-core = { module = "androidx.core:core-ktx", version.ref = "coreVersion" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersoin" }
+androidx-constrantlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constrantlayoutVersion" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleVersion" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycleVersion" }
+androidx-activitycompose = { module = "androidx.activity:activity-compose", version.ref = "activityVersion" }
+androidx-navigationcompose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationVersion" }
+material = { module = "com.google.android.material:material", version.ref = "materialVersion" }
+
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBomVersion" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-uigraphics = { module = "androidx.compose.ui:ui-graphics" }
+compose-uipreview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-uimaterial3 = { module = "androidx.compose.material3:material3" }
+compose-test-uitooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-test-uitestmanifest = { module = "androidx.compose.ui:ui-test-manifest" }
+
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutinesVersion" }
+coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutinesVersion" }
+
+test-junit = { module = "junit:junit", version.ref = "junitVersion" }
+test-uitestjunit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "composeJunit" }
+test-extjunit = { module = "androidx.test.ext:junit", version.ref = "junitExtVersion" }
+test-espresso = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoVersion" }
+
+[plugins]
+
+[bundles]
+coroutines = ["coroutines-core", "coroutines-android"]
+lifecycle = ["androidx-lifecycle-runtime-ktx", "androidx-lifecycle-runtime-compose"]

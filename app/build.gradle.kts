@@ -54,43 +54,31 @@ android {
 
 dependencies {
     // androidx
-    val coreVersion = "1.12.0"
-    val appcompatVersion = "1.6.1"
-    val constraintVersion = "2.1.4"
-    val activityVersion = "1.8.2"
-    val materialVersion = "1.11.0"
-    val navigationVersion = "2.7.7"
-    implementation("androidx.core:core-ktx:$coreVersion")
-    implementation("androidx.appcompat:appcompat:$appcompatVersion")
-    implementation("androidx.constraintlayout:constraintlayout:$constraintVersion")
-    implementation("androidx.activity:activity-compose:$activityVersion")
-    implementation("androidx.navigation:navigation-compose:$navigationVersion")
-    implementation("com.google.android.material:material:$materialVersion")
+    implementation(libs.androidx.core)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.constrantlayout)
+    implementation(libs.androidx.activitycompose)
+    implementation(libs.androidx.navigationcompose)
+    implementation(libs.material)
 
     // coroutines
-    val coroutinesVersion = "1.8.0"
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
+    implementation(libs.bundles.coroutines)
 
     // compose
-    val composeBomVersion = "2024.04.00"
-    implementation(platform("androidx.compose:compose-bom:$composeBomVersion"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.ui)
+    implementation(libs.compose.uigraphics)
+    implementation(libs.compose.uipreview)
+    implementation(libs.compose.uimaterial3)
 
     // lifecycle
-    val lifecycleVersion = "2.7.0"
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:$lifecycleVersion")
+    implementation(libs.bundles.lifecycle)
 
     // test
-    val junitVersion = "4.13.2"
-    testImplementation("junit:junit:$junitVersion")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.6.5")
-    debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    testImplementation(libs.test.junit)
+    androidTestImplementation(libs.test.extjunit)
+    androidTestImplementation(libs.test.espresso)
+    androidTestImplementation(libs.test.uitestjunit4)
+    debugImplementation(libs.compose.test.uitooling)
+    debugImplementation(libs.compose.test.uitestmanifest)
 }

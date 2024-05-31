@@ -12,18 +12,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Androidplayground"
+        android:theme="@style/Theme.AndroidPlayground"
         tools:targetApi="31">
         <activity
             android:name=".compse.ComposeActivity"
             android:exported="false"
             android:label="@string/title_activity_compose"
-            android:theme="@style/Theme.Androidplayground" />
+            android:theme="@style/Theme.AndroidPlayground" />
         <activity
             android:name=".notification.NotificationActivity"
             android:exported="false"
             android:label="@string/title_activity_notification"
-            android:theme="@style/Theme.Androidplayground" />
+            android:theme="@style/Theme.AndroidPlayground" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
